@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>TITANIC v/s ICEBERG</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                color: #333;
+                background: #fcfeff;
+            }
+
+            div {
+                width: min(95%, 700px);
+                margin: 0 auto;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            header svg {
+                width: 75%;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 200;
+            }
+
+            p {
+                margin: 0.9rem 0.3rem;
+            }
+
+            footer {
+                border-top: 1px solid #eee;
+                margin-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+
+            <header>
+                <!-- Ícono SVG del iceberg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#111" stroke-width="2">
+                    <polygon points="200,20 250,100 300,150 250,350 200,380 125,275 90,200 100,125 180,25" />
+                    <line x1="10" y1="100" x2="390" y2="100" />
+                </svg>
+
+                <h1 style="color:#2F4156">TITANIC v/s ICEBERG</h1>
+            </header>
+
+            <main>
+                <!-- El número de pasajeros se escribe aquí con JavaScript -->
+                <p>Usaremos datos disponibles en línea. Con ellos visualizaremos el destino de las <span id="total"></span> personas a bordo del Titanic, divididas en tres clases:</p>
+
+                <!-- Gráfico 1: Total por clase -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892 150">
+                    <g id="graficototal"></g>
+                </svg>
+
+                <h3 style="color:#2F4156">Desglose por clase</h3>
+
+                <!-- Gráfico 2: Primera clase — sobreviven vs mueren -->
+                <h4 style="color:#2F4156">Primera clase:</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892 180">
+                    <g id="primeraclase"></g>
+                </svg>
+
+                <!-- Gráfico 3: Segunda clase — sobreviven vs mueren -->
+                <h4 style="color:#2F4156">Segunda clase:</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892 180">
+                    <g id="unicornio"></g>
+                </svg>
+
+                <!-- Gráfico 4: Tercera clase — sobreviven vs mueren -->
+                <h4 style="color:#2F4156">Tercera clase:</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 892 180">
+                    <g id="salvavidas"></g>
+                </svg>
+
+            </main>
+
+            <div id="cierre" style="text-align:center;">
+                <img src="https://www.gerdarntz.org/sites/gerdarntz.org/files/GMDH02_00290.gif" style="width: 300px;" />
+            </div>
+
+            <footer>
+                <p>OPR — Florencia Verdier</p>
+            </footer>
+
+        </div>
+
+        <!-- Librería para leer archivos CSV -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <!-- Tu programa -->
+        <script src="programa.js"></script>
+
+    </body>
+</html>
